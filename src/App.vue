@@ -1,0 +1,23 @@
+<template>
+  <div id="app">
+    <router-link class='home-link title-font' to="/">Search</router-link>
+    <router-link class='fav-link title-font' to="/favorites">Favorites</router-link>
+    <router-view></router-view>
+  </div>
+</template>
+
+<script>
+import './assets/style/main.css'
+
+export default {
+  name: "App",
+
+  mounted() {
+    console.log(this.$favorites)
+  }
+};
+</script>
+
+<style>
+
+</style>

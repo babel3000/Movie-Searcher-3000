@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Montserrat:wght@700&display=swap');
+body {
+    margin: 0;
+    background: #000;
+    color: #fff;
+    font-size: 16px;
+    font-family: 'Abel', sans-serif;
+}
+
+.title-font {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+}
+
+.movie-top img,
+.movie-info {
+    display: inline-block
+}
+
+.movie-top {
+    margin-bottom: 20px;
+}
+
+.movie-top img {
+    width: 200px;
+    margin-right: 20px;
+}
+
+.movie-page {
+    max-width: 800px;
+    position: relative;
+    margin: 100px auto 0;
+}
+
+.home-link {
+    position: absolute;
+    top: 20px;
+    left: 70px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.fav-link {
+    position: absolute;
+    top: 20px;
+    right: 70px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.movie-bottom {
+    clear: both;
+}
+
+.favorites-list {
+    margin: 100px auto;
+    max-width: 800px;
+}
+
+.back-btn {
+    text-decoration: none;
+    color: #fff;
+    padding: 5px 20px;
+    border: 1px solid #fff;
+}
+
+.fav-btn {
+    background: none;
+    font-family: 'Montserrat', sans-serif;
+    border-width: 2px;
+    color: #fff;
+    position: absolute;
+    opacity: 0;
+    font-size: 1.1em;
+    z-index: 3;
+    transition: .5s all;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.movie-fav-btn {
+    background: none;
+    font-family: 'Montserrat', sans-serif;
+    border-width: 2px;
+    color: #fff;
+    position: absolute;
+    font-size: 1.1em;
+    z-index: 3;
+    top: 0;
+    right: 0;
+}
+
+input {
+    background: none;
+    border: none;
+    border-bottom: 2px solid #fff;
+    font-size: 2em;
+    color: #fff;
+    outline: none;
+    padding-bottom: .3rem;
+    margin-bottom: 2rem;
+}
+
+.input:focus {
+    outline-offset: none;
+}
+
+.movie-list {
+    text-align: center;
+    margin-top: 200px;
+    width: 100%;
+}
+
+figure {
+    position: relative;
+    width: 20%;
+    display: inline-block;
+    margin-bottom: 3rem;
+}
+
+figure img {
+    width: 100%;
+    object-fit: contain;
+    transition: .5s all;
+}
+
+.movie-list a,
+.favorites-list a {
+    color: #fff;
+    text-decoration: none;
+}
+
+figcaption p {
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+figcaption {
+    position: absolute;
+    opacity: 0;
+    transition: .5s all;
+    bottom: 0;
+    left: 50%;
+    text-align: center;
+    width: 100%;
+    z-index: -1;
+    transform: translateX(-50%);
+}
+
+figure:hover figcaption {
+    opacity: 1;
+    z-index: 2;
+    bottom: -30px;
+}
+
+figure:hover img {
+    opacity: .6;
+    transform: translateY(-30px);
+}
+
+figure:hover .fav-btn {
+    opacity: 1;
+}
+
+
+/* TRANSITIONS */
+
+.fadeDown-enter,
+.fadeDown-leave-to {
+    opacity: 0;
+    transform: translateY(-200px);
+}
+
+.fadeDown-enter-active,
+.fadeDown-leave-active {
+    transition: .7s all;
+}
