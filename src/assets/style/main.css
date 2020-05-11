@@ -21,6 +21,16 @@ body {
     margin-bottom: 20px;
 }
 
+.fade-enter,
+.fade-leave-to {
+    opacity: 0
+}
+
+.fade-enter-active,
+.fade-leave-active {
+    transition: .8s all;
+}
+
 .movie-top img {
     width: 200px;
     margin-right: 20px;

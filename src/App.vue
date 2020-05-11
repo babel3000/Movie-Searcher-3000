@@ -2,7 +2,9 @@
   <div id="app">
     <router-link class='home-link title-font' to="/">Search</router-link>
     <router-link class='fav-link title-font' to="/favorites">Favorites</router-link>
+    <transition name='fade'>
     <router-view></router-view>
+    </transition>
   </div>
 </template>
 
